@@ -9,3 +9,4 @@ public interface UserRepository extends
 
 	User findByAlias(String alias);
 }
+
