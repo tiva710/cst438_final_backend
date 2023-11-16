@@ -9,5 +9,5 @@ public class FinalBackendApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FinalBackendApplication.class, args);
 	}
-//check this out
+//checked
 }
