@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="user_table")
-public class User {
+public class User1 {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
@@ -22,6 +22,8 @@ public class User {
 	private String email; 
 	private String password;
 	private String role;
+	private String accessToken;
+	private String refreshToken;
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="user")
 	private List<Attempt> attempts;
 	private String level;
@@ -80,6 +82,18 @@ public class User {
 	}
 	public void setRole(String role) {
 		this.role = role;
+	}
+	public String getAccessToken() {
+		return accessToken;
+	}
+	public void setAccessToken(String accessToken) {
+		this.accessToken = accessToken;
+	}
+	public String getRefreshToken() {
+		return refreshToken;
+	}
+	public void setRefreshToken(String refreshToken) {
+		this.refreshToken = refreshToken;
 	}
 	
 	

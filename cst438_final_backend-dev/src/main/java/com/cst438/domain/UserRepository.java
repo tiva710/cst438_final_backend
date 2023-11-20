@@ -4,9 +4,10 @@ import org.springframework.data.repository.CrudRepository;
 
 
 public interface UserRepository extends 
-                 CrudRepository<User, Integer>{
+                 CrudRepository<User1, Integer>{
 
 
-	User findByAlias(String alias);
+	User1 findByAlias(String alias);
+	User1 findById(String id);
 }
 

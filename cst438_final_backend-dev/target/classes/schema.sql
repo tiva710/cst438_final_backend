@@ -7,7 +7,9 @@ create table user_table (
 	last_name varchar(25), 
 	level varchar(25),
 	password varchar(100), 
-	role varchar(25)
+	role varchar(25),
+	access_token varchar(150),
+	refresh_token varchar(150)
 );
 
 create table attempt (

@@ -9,14 +9,19 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cst438</groupId>
-	<artifactId>MultiplyGame1</artifactId>
+	<artifactId>SpotifyApp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>MultiplyGame1</name>
-	<description>Demo multiply game</description>
+	<name>SpotifyApp</name>
+	<description>Search On Spotify</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>se.michaelthelin.spotify</groupId>
+			<artifactId>spotify-web-api-java</artifactId>
+			<version>8.3.4</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>

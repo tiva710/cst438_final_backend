@@ -1,6 +1,6 @@
 package com.cst438.service;
 
-import com.cst438.domain.User;
+import com.cst438.domain.User1;
 import com.cst438.domain.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     @Override
-    public User registerUser(User user) {
+    public User1 registerUser(User1 user) {
         // Validate that both username and password are provided
         if (user.getAlias() == null || user.getPassword() == null) {
             throw new IllegalArgumentException("Username and password are required.");

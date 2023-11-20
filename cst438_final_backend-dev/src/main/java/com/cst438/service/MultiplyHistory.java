@@ -7,7 +7,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import com.cst438.domain.Attempt;
 import com.cst438.domain.AttemptRepository;
-import com.cst438.domain.User;
+import com.cst438.domain.User1;
 import com.cst438.domain.UserRepository;
 import com.cst438.dto.MultiplyProblem;
 import com.cst438.dto.MultiplyResult;
@@ -30,9 +30,9 @@ public class MultiplyHistory {
 		/*
 		 * if user alias does not exist, then create one
 		 */
-		User user = userRepository.findByAlias(ma.alias());
+		User1 user = userRepository.findByAlias(ma.alias());
 		if (user == null) {
-			user = new User();
+			user = new User1();
 			user.setAlias(ma.alias());
 			userRepository.save(user);
 		}

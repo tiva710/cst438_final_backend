@@ -1,6 +1,6 @@
 package com.cst438.service;
 
-import com.cst438.domain.User;
+import com.cst438.domain.User1;
 import com.cst438.domain.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,16 +24,16 @@ class UserServiceTest {
         // Clean up the database 
         userRepository.deleteAll();
 
-        User user = new User();
+        User1 user = new User1();
         user.setAlias("testUser");
         user.setPassword("testPassword");
         user.setRole("USER");
 
         // Save the user 
-        User registeredUser = userService.registerUser(user);
+        User1 registeredUser = userService.registerUser(user);
 
         // Retrieve the user from the database and assert its values
-        User retrievedUser = userRepository.findByAlias("testUser");
+        User1 retrievedUser = userRepository.findByAlias("testUser");
         assertEquals("testUser", retrievedUser.getAlias());
         assertEquals("testPassword", retrievedUser.getPassword());
         assertEquals("USER", retrievedUser.getRole());
@@ -42,7 +42,7 @@ class UserServiceTest {
     @Test
     void testRegisterUserWithNullValues() {
         // register a user with null values
-        User user = new User();
+        User1 user = new User1();
         assertThrows(IllegalArgumentException.class, () -> userService.registerUser(user));
     }
 
@@ -52,14 +52,14 @@ class UserServiceTest {
         userRepository.deleteAll();
 
         // Save a user with a specific username
-        User existingUser = new User();
+        User1 existingUser = new User1();
         existingUser.setAlias("existingUser");
         existingUser.setPassword("password");
         existingUser.setRole("USER");
         userRepository.save(existingUser);
 
         // user with the same username
-        User user = new User();
+        User1 user = new User1();
         user.setAlias("existingUser");
         user.setPassword("newPassword");
         user.setRole("USER");

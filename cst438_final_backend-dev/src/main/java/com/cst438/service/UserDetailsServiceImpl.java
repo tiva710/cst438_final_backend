@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.cst438.domain.User;
+import com.cst438.domain.User1;
 import com.cst438.domain.UserRepository;
 
 @Service
@@ -18,7 +18,7 @@ public class UserDetailsServiceImpl implements UserDetailsService  {
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User currentUser = repository.findByAlias(username); 
+		User1 currentUser = repository.findByAlias(username); 
 
 		UserBuilder builder = null;
 		if (currentUser!=null) {

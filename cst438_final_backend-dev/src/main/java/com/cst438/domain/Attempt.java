@@ -21,7 +21,7 @@ public class Attempt {
 	private boolean isCorrect;
 	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="user_id")
-	private User user;
+	private User1 user;
 	
 	
 	public int getId() {
@@ -60,10 +60,10 @@ public class Attempt {
 	public void setCorrect(boolean isCorrect) {
 		this.isCorrect = isCorrect;
 	}
-	public User getUser() {
+	public User1 getUser() {
 		return user;
 	}
-	public void setUser(User user) {
+	public void setUser(User1 user) {
 		this.user = user;
 	}
 	
