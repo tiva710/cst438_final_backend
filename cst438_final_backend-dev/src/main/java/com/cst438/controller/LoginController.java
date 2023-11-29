@@ -21,7 +21,7 @@ public class LoginController {
 	@Autowired
 	private JwtService jwtService;
 
-	@Autowired	
+	@Autowired
 	AuthenticationManager authenticationManager;
 
 	@RequestMapping(value="/login", method=RequestMethod.POST)
@@ -44,3 +44,7 @@ public class LoginController {
 
 	}
 }
+
+//front end-client
+//backend a server
+//spotify: another server
