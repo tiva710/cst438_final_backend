@@ -23,8 +23,6 @@ public class User {
 	private String password;
 	private String role;
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="user")
-	private List<Attempt> attempts;
-	private String level;
 	
 	
 	public int getId() {
@@ -57,18 +55,8 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public List<Attempt> getAttempts() {
-		return attempts;
-	}
-	public void setAttempts(List<Attempt> attempts) {
-		this.attempts = attempts;
-	}
-	public String getLevel() {
-		return level;
-	}
-	public void setLevel(String level) {
-		this.level = level;
-	}
+	
+	
 	public String getPassword() {
 		return password;
 	}
