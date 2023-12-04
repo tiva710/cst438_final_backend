@@ -15,12 +15,12 @@ public class UserServicelmpl implements UserService {
     @Override
     public User registerUser(User user) {
         // Validate that both username and password are provided
-        if (user.getAlias() == null || user.getPassword() == null) {
+        if (user.getUserName() == null || user.getPassword() == null) {
             throw new IllegalArgumentException("Username and password are required.");
         }
 
         // Check if the username is already taken
-        if (userRepository.findByAlias(user.getAlias()) != null) {
+        if (userRepository.findByusername(user.getUserName()) != null) {
             throw new IllegalArgumentException("Username is already taken.");
         }
 
