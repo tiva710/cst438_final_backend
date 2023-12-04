@@ -41,7 +41,7 @@ public class LoginController {
 
 		// Generate token
 		String jwts = jwtService.getToken(auth.getName());
-		User user = userRepository.findByAlias(credentials.username());
+		User user = userRepository.findByusername(credentials.username());
 		// Build response with the generated token
 		return ResponseEntity.ok()
 				.header(HttpHeaders.AUTHORIZATION, "Bearer " + jwts)
