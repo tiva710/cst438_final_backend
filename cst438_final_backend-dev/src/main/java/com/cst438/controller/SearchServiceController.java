@@ -40,15 +40,13 @@ public class SearchServiceController {
 //    }
 
     @GetMapping("/api/search/{query}")
-    public List<Track> searchTracks(@PathVariable String query, @RequestHeader("Authorization") String accessToken) {
-        System.out.println("Received headers: Authorization - " + accessToken);
+    public List<Track> searchTracks(@PathVariable String query, @RequestParam("Authorization") String loginToken) {
+        System.out.println("Received headers: Authorization - " + loginToken);
 
-//        String url = "https://api.spotify.com/v1/search?type=genres&q=" + query;
         String url = "https://api.spotify.com/v1/search?q=" + query + "&type=track"; // Or artist, album
-//          String url = "https://api.spotify.com/v1/search?q={query}&type=track,artist,album";
 
         HttpHeaders headers = new HttpHeaders();
-        headers.set("Authorization", accessToken); // Adding 'Bearer ' prefix
+        headers.set("Authorization", loginToken); // Adding 'Bearer ' prefix
         HttpEntity<String> entity = new HttpEntity<>(headers);
 
         try {
@@ -57,8 +55,7 @@ public class SearchServiceController {
             logger.info("URL: {}", url);
             logger.info("Response from Spotify API: {}", response.getBody());
 
-            // Process the response body to convert it into List<Track>
-            // Assuming you have a method to convert JSON to List<Track>
+            
             List<Track> tracks = convertJsonToTracks(response.getBody());
             return ResponseEntity.ok(tracks).getBody();
 
