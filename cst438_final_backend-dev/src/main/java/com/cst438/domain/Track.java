@@ -8,6 +8,8 @@ public class Track {
     private String id;
     private String name;
     private Album album;
+    private int duration_ms;
+
     // Other fields...
 
     // Default constructor
@@ -39,6 +41,13 @@ public class Track {
     public void setAlbum(Album album) {
         this.album = album;
     }
+    
+    public int getDuration_ms() {
+    	return duration_ms;
+    }
+    
+    public void setDuration(int duration_ms) {
+    	this.duration_ms = duration_ms;
+    }
 }
-
 
