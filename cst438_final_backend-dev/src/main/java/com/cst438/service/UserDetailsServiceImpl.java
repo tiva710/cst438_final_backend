@@ -13,6 +13,7 @@ import com.cst438.domain.UserRepository;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService  {
+	
 	@Autowired
 	private UserRepository repository;
 
