@@ -16,71 +16,38 @@ public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
-	private String alias;
-	private String firstName;
-	private String lastName;
-	private String email; 
+	private String username;
+
 	private String password;
 	private String role;
-	@OneToMany(cascade=CascadeType.ALL, mappedBy="user")
-	private List<Attempt> attempts;
-	private String level;
-	
-	
+
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getAlias() {
-		return alias;
+	public String getUserName() {
+		return username;
 	}
-	public void setAlias(String alias) {
-		this.alias = alias;
+	public void setuserName(String username) {
+		this.username = username;
 	}
-	public String getFirstName() {
-		return firstName;
-	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	public String getLastName() {
-		return lastName;
-	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public List<Attempt> getAttempts() {
-		return attempts;
-	}
-	public void setAttempts(List<Attempt> attempts) {
-		this.attempts = attempts;
-	}
-	public String getLevel() {
-		return level;
-	}
-	public void setLevel(String level) {
-		this.level = level;
-	}
-	public String getPassword() {
-		return password;
-	}
+
 	public void setPassword(String password) {
 		this.password = password;
-	}
-	public String getRole() {
-		return role;
 	}
 	public void setRole(String role) {
 		this.role = role;
 	}
-	
+	public String getPassword() {
+
+		return password;
+	}
+	public String getRole() {
+
+		return role;
+	}
+
 	
 }

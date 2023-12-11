@@ -1,0 +1,39 @@
+•Scope Configuration:
+spring.security.oauth2.client.registration.spotify.scope=user-read-private, user-read-email
+-This sets the OAuth2 scopes for the Spotify client. Scopes define the level of access the application requests from the user's Spotify account. Here, user-read-private allows access to private user data, and user-read-email allows access to the user's email address.
+
+•Authorization URI:
+spring.security.oauth2.client.provider.spotify.authorization-uri=https://accounts.spotify.com/authorize
+-This specifies the URI for the Spotify authorization server. It's the endpoint to which your application will redirect users for them to grant access permissions.
+
+•Token URI:
+spring.security.oauth2.client.provider.spotify.token-uri=https://accounts.spotify.com/api/token
+-This is the URI of the Spotify token server. After the user grants access, your application will use this endpoint to exchange the authorization code for an access token.
+
+•User Info URI:
+spring.security.oauth2.client.provider.spotify.user-info-uri=https://api.spotify.com/v1/me
+-This defines the endpoint to fetch user information after authentication. This endpoint typically returns data associated with the authenticated user (like user profile information).
+
+•User Name Attribute:
+spring.security.oauth2.client.provider.spotify.user-name-attribute=id
+-This sets the attribute in the userinfo response that should be used to extract the username. In this case, the id attribute of the user's Spotify profile is used.
+
+•Client ID:
+spring.security.oauth2.client.registration.spotify.client-id=20b39698765b4775a147d2bbb2798977
+-This is the client ID provided by Spotify when you register your application. It's used to identify your application to the Spotify API.
+
+•Client Secret:
+spring.security.oauth2.client.registration.spotify.client-secret=bd0ab06911384c54824dc5a3b6b2fafb
+-This is a secret key provided by Spotify, paired with the client ID. It's used to authenticate your application to the Spotify API and should be kept confidential.
+
+•Redirect URI:
+spring.security.oauth2.client.registration.spotify.redirect-uri=http://localhost:3000
+-This is the URI to which Spotify will redirect after the user has authenticated and granted permissions. It's where your application will process the authentication response.
+
+
+•Authorization Grant Type:
+spring.security.oauth2.client.registration.spotify.authorization-grant-type=authorization_code
+-This specifies the OAuth2 grant type as authorization_code, which is a common OAuth2 flow where a code is obtained as an intermediate step before acquiring an access token.
+
+cors?
+re-read spotify documentation on being able to login
