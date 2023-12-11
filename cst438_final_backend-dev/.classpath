@@ -53,5 +53,43 @@
 			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/Users/tiki/.m2/repository/org/springframework/data/spring-data-commons/2.7.16/spring-data-commons-2.7.16.jar" sourcepath="/Users/tiki/.m2/repository/org/springframework/data/spring-data-commons/2.7.16/spring-data-commons-2.7.16-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.springframework.data"/>
+			<attribute name="maven.artifactId" value="spring-data-commons"/>
+			<attribute name="maven.version" value="2.7.16"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/tiki/.m2/repository/net/minidev/json-smart/2.4.11/json-smart-2.4.11.jar" sourcepath="/Users/tiki/.m2/repository/net/minidev/json-smart/2.4.11/json-smart-2.4.11-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="test" value="true"/>
+			<attribute name="maven.groupId" value="net.minidev"/>
+			<attribute name="maven.artifactId" value="json-smart"/>
+			<attribute name="maven.version" value="2.4.11"/>
+			<attribute name="maven.scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/tiki/.m2/repository/org/seleniumhq/selenium/selenium-api/4.1.4/selenium-api-4.1.4.jar" sourcepath="/Users/tiki/.m2/repository/org/seleniumhq/selenium/selenium-api/4.1.4/selenium-api-4.1.4-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="test" value="true"/>
+			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
+			<attribute name="maven.artifactId" value="selenium-api"/>
+			<attribute name="maven.version" value="4.1.4"/>
+			<attribute name="maven.scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/tiki/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.1.4/selenium-chrome-driver-4.1.4.jar" sourcepath="/Users/tiki/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.1.4/selenium-chrome-driver-4.1.4-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
+			<attribute name="maven.artifactId" value="selenium-chrome-driver"/>
+			<attribute name="maven.version" value="4.1.4"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
